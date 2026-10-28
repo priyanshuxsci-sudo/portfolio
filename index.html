@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanshu Tiwari | AI & Data Science</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="loading">
+  <div id="loader">
+    <div class="ring"></div>
+    <p>Initializing Universe...</p>
+  </div>
+
+  <canvas id="universe"></canvas>
+  <div id="cursor-glow"></div>
+
+  <nav id="top-nav">
+    <a href="#" class="logo" data-stage="0">PT</a>
+    <div class="nav-links">
+      <a href="#" data-stage="1">Skills</a>
+      <a href="#" data-stage="2">PENCIL.ai</a>
+      <a href="#" data-stage="3">Connect</a>
+    </div>
+  </nav>
+
+  <!-- Scroll drives the camera. Each .stage is a HUD layer that fades in/out. -->
+  <div id="stages">
+    <!-- 0: GALAXY -->
+    <section class="stage stage--hero">
+      <h1 class="hero-name">Priyanshu Tiwari</h1>
+      <p class="hero-sub">First-year AI &amp; Data Science student</p>
+      <div class="scroll-indicator">
+        <span>Scroll to fly in</span>
+        <div class="line"></div>
+      </div>
+    </section>
+
+    <!-- 1: ASTEROID BELT -->
+    <section class="stage">
+      <span class="chapter-tag">01 / The Asteroid Belt</span>
+      <h2>My Technical <span class="gradient-text">Belt</span></h2>
+      <p class="lead">Every labelled rock is something I work with. Click one to open it.</p>
+    </section>
+
+    <!-- 2: SOLAR SYSTEM -->
+    <section class="stage">
+      <span class="chapter-tag">02 / First Project</span>
+      <h2><span class="gradient-text">PENCIL.ai</span></h2>
+      <p class="lead">A modular AI assistant with memory, tool use and evidence-based research. It doesn't just guess; it verifies.</p>
+      <div class="stage-foot">
+        <div class="flow-diagram">You → Plan → Research → Answer ⚡</div>
+        <p class="hint">Click the sun or a planet</p>
+        <a href="https://github.com/priyanshuxsci-sudo/pencil-ai" class="btn primary" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- 3: BLACK HOLE -->
+    <section class="stage stage--void">
+      <span class="chapter-tag">03 / Event Horizon</span>
+      <h2>The Void Is Still There.</h2>
+      <p class="big-cta gradient-gold">Let's Connect.</p>
+      <div class="magnetic-links">
+        <a href="https://www.linkedin.com/in/priyanshu-tiwari-pi31428999" class="magnetic-btn primary" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/priyanshuxsci-sudo" class="magnetic-btn secondary" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="copyright">© 2026 Priyanshu Tiwari</p>
+    </section>
+  </div>
+
+  <!-- Info panel for clicked skills / planets -->
+  <aside id="info" aria-live="polite">
+    <button id="info-close" type="button" aria-label="Close">×</button>
+    <span class="chapter-tag" id="info-tag"></span>
+    <h3 id="info-name"></h3>
+    <p id="info-desc"></p>
+    <p id="info-use"></p>
+    <a id="info-link" class="btn primary" target="_blank" rel="noopener" hidden>View on GitHub ↗</a>
+  </aside>
+
+  <div id="scroll-space"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
